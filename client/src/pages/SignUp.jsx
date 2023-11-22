@@ -50,6 +50,7 @@ export default function SignUp() {
           placeholder="username"
           className="border p-3 rounded-lg"
           id="username"
+          value={formData.username}
           onChange={handleChange}
         />
         <input
@@ -57,6 +58,7 @@ export default function SignUp() {
           placeholder="email"
           className="border p-3 rounded-lg"
           id="email"
+          value={formData.email}
           onChange={handleChange}
         />
         <input
@@ -64,6 +66,7 @@ export default function SignUp() {
           placeholder="password"
           className="border p-3 rounded-lg"
           id="password"
+          value={formData.password}
           onChange={handleChange}
         />
         <button
