@@ -16,11 +16,6 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    avatar: {
-      type: String,
-      default:
-        "https://www.iprcenter.gov/image-repository/blank-profile-picture.png/image_view_fullscreen",
-    },
   },
   { timestamps: true }
 );
