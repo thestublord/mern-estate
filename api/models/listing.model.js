@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const listingSchema = new mongoose.Schema(
   {
-    title: {
+    name: {
       type: String,
       required: [true, "Title is required"],
       trim: true,
@@ -49,11 +49,6 @@ const listingSchema = new mongoose.Schema(
     imageUrls: {
       type: Array,
       required: [true, "Image is required"],
-      trim: true,
-    },
-    location: {
-      type: String,
-      required: [true, "Location is required"],
       trim: true,
     },
     userRef: {
