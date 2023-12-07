@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const listingSchema = new mongoose.Schema(
   {
-    name: {
+    title: {
       type: String,
       required: [true, "Title is required"],
       trim: true,
@@ -28,7 +28,7 @@ const listingSchema = new mongoose.Schema(
       type: Number,
       required: [true, "Discount is required"],
       min: [0, "Discount cannot be less than 0"],
-      max: [100, "Discount cannot be more than 100"],
+      max: [10000000, "Discount cannot be more than 10000000"],
     },
     bathrooms: {
       type: Number,
@@ -44,7 +44,7 @@ const listingSchema = new mongoose.Schema(
       type: String,
       required: [true, "Type is required"],
       trim: true,
-      enum: ["House", "Apartment", "Studio"],
+      enum: ["rent", "sale"],
     },
     imageUrls: {
       type: Array,
