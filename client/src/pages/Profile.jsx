@@ -263,7 +263,7 @@ export default function Profile() {
               </Link>
               <Link
                 className="text-slate-700 font-semibold hover:underline truncate flex-1"
-                to={`listing/${listing._id}`}
+                to={`/listing/${listing._id}`}
               >
                 <p>{listing.title}</p>
               </Link>
@@ -276,7 +276,7 @@ export default function Profile() {
                 </Link>
                 <span
                   onClick={() => handleListingDelete(listing._id)}
-                  className="text-red-700 cursor-pointer"
+                  className="text-red-700 cursor-pointer hover:underline"
                 >
                   Delete
                 </span>

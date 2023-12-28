@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ListingItems from "../components/ListingItems";
+import ListingItem from "../components/ListingItem";
 
 export default function Search() {
   const navigate = useNavigate();
@@ -195,8 +195,8 @@ export default function Search() {
               className="border rounded-lg p-3"
               id="sort_order"
             >
-              <option value={"price_desc"}>Price: Low to High</option>
-              <option value={"discount_asc"}>Price: High to Low</option>
+              <option value={"price_asc"}>Price: Low to High</option>
+              <option value={"price_desc"}>Price: High to Low</option>
               <option value={"createdAt_desc"}>Latest</option>
               <option value={"createdAt_asc"}>Oldest</option>
             </select>
@@ -222,7 +222,7 @@ export default function Search() {
           {!loading &&
             listings &&
             listings.map((listing) => (
-              <ListingItems key={listing._id} listing={listing} />
+              <ListingItem key={listing._id} listing={listing} />
             ))}
           {showMore && (
             <button
